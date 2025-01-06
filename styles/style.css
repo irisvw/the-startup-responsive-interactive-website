@@ -1,9 +1,96 @@
+:root {
+    --primary-color: #005e5d;
+    --secondary-color: #00857a;
+    --tertiary-color: #ffd200;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-h1 {
-    font-family: sans-serif;
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.header-xl {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.header-l {
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-primary {
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: white;
+    overflow-x: scroll;
+}
+
+.nav-secondary {
+    padding: .5em 1em;
+    background-color: white;
+    color: var(--primary-color);
+    
+}
+
+.logo {
+    margin-right: auto;
+    margin-top: .75rem;
+    height: 2rem;
+}
+
+.nav-secondary-links {
+    justify-self: flex-end;
+    list-style: unset;
+    list-style-type: "| "; 
+}
+
+.nav-secondary-links li:nth-child(1) {
+    justify-self: flex-end;
+    list-style: none;
+}
+
+.nav-mobile {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+
+
+.desktop-only {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-only {
+        display: flex;
+    }
+}
+
+.inloggen {
+    display: block;
+    text-decoration: none;
+    background-color: var(--tertiary-color);
+    color: black;
+    padding: 1em;
+    height: 3rem;
 }
