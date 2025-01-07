@@ -137,3 +137,25 @@ main .container {
     padding: .75em 1em;
     border-radius: 2px;
 }
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    top: 0;
+}
+
+.visually-hidden:focus {
+    clip: auto;
+    clip-path: unset;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+    background-color: white;
+}
