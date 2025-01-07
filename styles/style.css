@@ -1,7 +1,7 @@
 :root {
     --primary-color: #005e5d;
     --secondary-color: #00857a;
-    --tertiary-color: #ffd200;
+    --accent-color: #ffd200;
 
     --primary-bg: #F9F9F9;
     --secondary-bg: #FFFFFF;
@@ -30,13 +30,34 @@ main {
 }
 
 .header-l {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+}
 
+.header-m {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
 }
 
 nav {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .container {
@@ -45,12 +66,6 @@ nav {
     align-items: center;
     max-width: 1300px;
     margin: auto;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
 }
 
 .nav-primary {
@@ -89,6 +104,10 @@ ul {
     height: 2rem;
 }
 
+.search-icon {
+   padding-left: 1em;
+}
+
 .nav-mobile {
     background-color: white;
     color: var(--primary-color);
@@ -100,14 +119,20 @@ ul {
 
 @media screen and (min-width: 768px) {
     .desktop-only {
-        display: flex;
+        display: inherit;
     }
+}
+
+main .container {
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
 }
 
 .inloggen {
     display: block;
     text-decoration: none;
-    background-color: var(--tertiary-color);
+    background-color: var(--accent-color);
     color: black;
     padding: .75em 1em;
     border-radius: 2px;
