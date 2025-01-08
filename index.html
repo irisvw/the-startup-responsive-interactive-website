@@ -19,7 +19,7 @@
         <a href="#main" class="visually-hidden">Skip to main content</a>
         <nav class="nav-secondary">
             <div class="container">
-                <a href="#" class="logo"><img src="assets/abn.svg" height="100" alt=""></a>
+                <a href="#" class="logo" aria-label="home"><img src="assets/abn.svg" height="100" alt=""></a>
                 <ul class="desktop-only">
                     <li><a href="#">Privé</a></li>
                     <li><a href="#">Zakelijk</a></li>
@@ -44,7 +44,7 @@
     </header>
 
     <main id="main">
-        <a href="#">< abnamro</a>
+        <a href="#" class="breadcrumb">< abnamro</a>
         <div class="container">
             <section>
                 <h1 class="header-xl">Toegankelijkheidsverklaring</h1>
@@ -67,11 +67,14 @@
                 Op abnamro.nl is het mogelijk om bepaalde instellingen en het kleurenschema aan te passen aan uw
                 wensen.
                 Hieronder ziet u uw huidige voorkeuren:
-                Jouw kleuren: Automatisch
-                Animaties: Toon animaties & overgangen
-                Externe websites: Opent in nieuw venster
-                Wijzig jouw voorkeuren
-                Jouw voorkeuren verwijderen
+                
+                <ul>
+                    <li>Jouw kleuren: Automatisch</li>
+                    <li>Animaties: Toon animaties & overgangen</li>
+                    <li>Externe websites: Opent in nieuw venster</li>
+                    <li>Wijzig jouw voorkeuren</li>
+                    <li>Jouw voorkeuren verwijderen</li>
+                </ul>
             </section>
 
             <section>
@@ -127,72 +130,79 @@
 
     <footer>
         <section class="footer-hulp">
-            <h3 class="visually-hidden">Service en Contact</h3>
-            Hulp nodig? Bekijk op de pagina Service & Contact hoe we je vooruit kunnen helpen.
-            <a href="#">Naar Service en Contact</a>
+            <div class="container">
+                <h3>Hulp nodig?</h3>
+                <p>Bekijk op de pagina Service & Contact hoe we je vooruit kunnen helpen.</p>
+                <a href="#">Naar Service en Contact</a>
+            </div>
         </section>
         <section class="footer-nav">
-            <h3 class="visually-hidden">Snel zelf regelen</h3>
-            <details>
-                <summary>Snel zelf regelen</summary>
-                <h3>Producten</h3>
-                <ul>
-                    <li><a href="#">Betalen & Creditcards</a></li>
-                    <li><a href="#">Hypotheken</a></li>
-                    <li><a href="#">Geld lenen</a></li>
-                    <li><a href="#">Beleggen</a></li>
-                    <li><a href="#">Sparen</a></li>
-                    <li><a href="#">Verzekeringen</a></li>
-                    <li><a href="#">Pensioen</a></li>
-                </ul>
-                <h3>Je situatie</h3>
-                <ul>
-                    <li><a href="#">Ouders & Kinderen</a></li>
-                    <li><a href="#">Wonen</a></li>
-                    <li><a href="#">Studeren</a></li>
-                    <li><a href="#">Vermogen</a></li>
-                    <li><a href="#">Senioren</a></li>
-                    <li><a href="#">Ondernemers</a></li>
-                </ul>
-                <h3>Meest gezocht</h3>
-                <ul>
-                    <li><a href="#">Hypotheek berekenen</a></li>
-                    <li><a href="#">E.dentifier</a></li>
-                    <li><a href="#">Jaaroverzicht</a></li>
-                    <li><a href="#">Rood staan</a></li>
-                </ul>
-                <h3>Digitale Diensten</h3>
-                <ul>
-                    <li><a href="#">Internet Bankieren</a></li>
-                    <li><a href="#">ABN AMRO app</a></li>
-                    <li><a href="#">Tikkie</a></li>
-                    <li><a href="#">Apple Pay</a></li>
-                    <li><a href="#">Google Pay</a></li>
-                    <li><a href="#">Veilig bankieren</a></li>
-                </ul>
-            </details>
+            <div class="container">
+                <h3 class="visually-hidden">Snel zelf regelen</h3>
+                <details>
+                    <summary>Snel zelf regelen</summary>
+                    <h3>Producten</h3>
+                    <ul>
+                        <li><a href="#">Betalen & Creditcards</a></li>
+                        <li><a href="#">Hypotheken</a></li>
+                        <li><a href="#">Geld lenen</a></li>
+                        <li><a href="#">Beleggen</a></li>
+                        <li><a href="#">Sparen</a></li>
+                        <li><a href="#">Verzekeringen</a></li>
+                        <li><a href="#">Pensioen</a></li>
+                    </ul>
+                    <h3>Je situatie</h3>
+                    <ul>
+                        <li><a href="#">Ouders & Kinderen</a></li>
+                        <li><a href="#">Wonen</a></li>
+                        <li><a href="#">Studeren</a></li>
+                        <li><a href="#">Vermogen</a></li>
+                        <li><a href="#">Senioren</a></li>
+                        <li><a href="#">Ondernemers</a></li>
+                    </ul>
+                    <h3>Meest gezocht</h3>
+                    <ul>
+                        <li><a href="#">Hypotheek berekenen</a></li>
+                        <li><a href="#">E.dentifier</a></li>
+                        <li><a href="#">Jaaroverzicht</a></li>
+                        <li><a href="#">Rood staan</a></li>
+                    </ul>
+                    <h3>Digitale Diensten</h3>
+                    <ul>
+                        <li><a href="#">Internet Bankieren</a></li>
+                        <li><a href="#">ABN AMRO app</a></li>
+                        <li><a href="#">Tikkie</a></li>
+                        <li><a href="#">Apple Pay</a></li>
+                        <li><a href="#">Google Pay</a></li>
+                        <li><a href="#">Veilig bankieren</a></li>
+                    </ul>
+                </details>
+            </div>
         </section>
         <section class="footer-socials">
-            <h3 class="visually-hidden">Overige links</h3>
-            <ul class="secondary-footer-nav">
-                <li><a href="#">Over ABN AMRO</a></li>
-                <li><a href="#">Klacht indienen</a></li>
-                <li><a href="#">Werken bij ABN AMRO</a></li>
-                <li><a href="#">Toegankelijkheid</a></li>
-                <li><a href="#">Omgangsregels</a></li>
-                <li><a href="#">Duurzaamheid</a></li>
-                <li><a href="#">Veiligheid</a></li>
-                <li><a href="#">Privacy en cookies</a></li>
-                <li><a href="#">Disclaimer</a></li>
-            </ul>
-            <ul class="socials">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">X</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">YouTube</a></li>
-                <li><a href="#">Nieuwsbrief</a></li>
-            </ul>
-            Copyright 2024 ABN AMRO
+            <div class="container">
+                <h3 class="visually-hidden">Overige links</h3>
+                <ul class="secondary-footer-nav">
+                    <li><a href="#">Over ABN AMRO</a></li>
+                    <li><a href="#">Klacht indienen</a></li>
+                    <li><a href="#">Werken bij ABN AMRO</a></li>
+                    <li><a href="#">Toegankelijkheid</a></li>
+                    <li><a href="#">Omgangsregels</a></li>
+                    <li><a href="#">Duurzaamheid</a></li>
+                    <li><a href="#">Veiligheid</a></li>
+                    <li><a href="#">Privacy en cookies</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+                <ul class="socials">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Nieuwsbrief</a></li>
+                </ul>
+                Copyright 2024 ABN AMRO
+                Deze pagina is gemaakt voor educatieve doeleinden.
+            </div>
         </section>
     </footer>
     <script src="scripts/main.js"></script>
