@@ -178,7 +178,7 @@ main {
         display: block;
         width: 1300px;
         margin: 0 auto;
-        padding: 1em 0;
+        padding: 1em;
     }
 
     .container {
@@ -229,6 +229,25 @@ footer {
         display: inline-flex;
         list-style: none;
         gap: .25rem;
+    }
+
+    details {
+        width: 100%;
+    }
+
+    .details-subsection {
+        min-width: max-content;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .flex {
+        flex-direction: row;
     }
 }
 
