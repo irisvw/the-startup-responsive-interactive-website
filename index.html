@@ -34,10 +34,12 @@
         <nav class="nav-primary">
             <div class="container">
                 <ul>
-                    <li class="desktop-only"><a href="#">Home</a></li>
+                    <li class="desktop-only">
+                        <a href="#">Home</a>
+                    </li>
                     <li>
-                        <button>Producten ∨</button>
-                        <nav class="subnav collapsed">
+                        <button class="button-producten" aria-expanded="false">Producten ∨</button>
+                        <nav class="subnav subnav-producten collapsed">
                             <ul>
                                 <li>Betalen & Creditcards</li>
                                 <li>Hypotheken</li>
@@ -45,8 +47,9 @@
                             </ul>
                         </nav>
                     </li>
-                    <li><button>Je situatie ∨</button>
-                        <nav class="subnav collapsed">
+                    <li>
+                        <button class="button-situatie" aria-expanded="false">Je situatie ∨</button>
+                        <nav class="subnav subnav-situatie collapsed">
                             <ul>
                                 <li>Betalen & Creditcards</li>
                                 <li>Hypotheken</li>
@@ -54,15 +57,19 @@
                             </ul>
                         </nav>
                     </li>
-                    <li><button>App en Internet Bankieren ∨</button>
-                        <nav class="subnav collapsed">
+                    <li>
+                        <button class="button-app" aria-expanded="false">App en Internet Bankieren ∨</button>
+                        <nav class="subnav subnav-app collapsed">
                             <ul>
                                 <li>Betalen & Creditcards</li>
                                 <li>Hypotheken</li>
                                 <li>Geld Lenen</li>
                             </ul>
-                        </nav></li>
-                    <li><a href="#">Service en Contact</a></li>
+                        </nav>
+                    </li>
+                    <li>
+                        <a href="#">Service en Contact</a>
+                    </li>
                 </ul>
                 <button class="search"><img src="assets/search.svg" alt=""></button>
             </div>
