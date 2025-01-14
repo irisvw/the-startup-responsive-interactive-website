@@ -357,6 +357,24 @@ footer {
     }
 }
 
+.footer-subsection {
+    ul {
+        list-style: none;
+        line-height: 2;
+
+        li {
+            min-width: max-content;
+        }
+    }
+
+    a::before {
+        content: "";
+        background-image: url("../assets/arrow-right.svg");
+        padding-right: 20px;
+        background-repeat: no-repeat;
+    }
+}
+
 .footer-help {
     background-color: var(--secondary-color);
     color: white;
