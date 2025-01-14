@@ -266,9 +266,14 @@ nav {
     background-color: var(--accent-color);
     color: black;
     border-radius: 2px;
+    text-decoration: none;
+    padding: .75em 1em;
+
+    &:hover {
+        text-decoration: none;
+        background-color: #E8BF2B;
+    }
 }
-
-
 
 /* ======== */
 /* = MAIN = */
