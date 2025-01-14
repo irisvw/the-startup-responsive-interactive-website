@@ -150,7 +150,7 @@ nav {
 
         li {
             min-width: max-content;
-            
+
             a,
             button {
                 display: flex;
@@ -290,6 +290,17 @@ main {
     background-color: var(--primary-bg);
     padding-bottom: 2rem;
 
+    h1 {
+        margin-bottom: .5em;
+    }
+
+    @media screen and (min-width: 768px) {
+        h1 {
+            position: relative;
+            left: -5vw;
+        }
+    }
+
     section {
         width: 100%;
         max-width: 40em;
@@ -297,7 +308,7 @@ main {
 
     .breadcrumb {
         display: block;
-        width: 1300px;
+        width: var(--content-width);
         margin: 0 auto;
         padding: 1em;
     }
