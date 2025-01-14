@@ -86,7 +86,7 @@ p {
 
 .header-xl {
     font-family: var(--secondary-font);
-    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    font-size: clamp(1.5rem, 8vw, 3rem);
     line-height: 3rem;
     font-weight: 400;
     color: var(--primary-color);
@@ -108,6 +108,13 @@ p {
 }
 
 .header-s {
+    font-family: var(--secondary-font);
+    font-size: 1.125rem;
+    line-height: 1.5em;
+    margin: .5em;
+}
+
+.header-xs {
     font-family: var(--primary-font);
     font-size: 1rem;
     line-height: 1.5em;
@@ -335,6 +342,10 @@ footer {
         display: inline-flex;
         list-style: none;
         gap: .25rem;
+    }
+
+    summary h3 {
+        display: inline-block;
     }
 
     details {
