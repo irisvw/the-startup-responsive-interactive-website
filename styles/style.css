@@ -77,6 +77,17 @@ a {
     }
 }
 
+.subflex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:1000px) {
+    .subflex {
+        flex-direction: row;
+    }
+}
+
 /* ============== */
 /* = TYPOGRAPHY = */
 /* ============== */
@@ -188,7 +199,7 @@ nav {
         position: absolute;
         left: 0;
         z-index: 1;
-        background: #00675e linear-gradient(135deg,#005e5d 0,#00877d 58%,#00756f 58%,#009185 100%);
+        background: #00675e linear-gradient(135deg, #005e5d 0, #00877d 58%, #00756f 58%, #009185 100%);
         color: white;
         min-height: 50vh;
 
@@ -382,6 +393,10 @@ footer {
 }
 
 .footer-subsection {
+    min-width: max-content;
+    max-width: 20%;
+    flex-grow: 0;
+
     ul {
         list-style: none;
         line-height: 2;
