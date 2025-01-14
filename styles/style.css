@@ -141,39 +141,28 @@ p {
 /* = PRIMARY NAV = */
 /* =============== */
 
-nav {
-    ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-}
-
 .nav-primary {
     background-color: var(--primary-color);
     background-image: linear-gradient(-296deg, #005e5d, #00857a);
     color: white;
 
     ul {
+        display: flex;
         gap: 0;
         align-items: stretch;
+        list-style: none;
 
         li {
             min-width: max-content;
-
-            a,
-            button {
-                display: flex;
-                align-items: center;
-                height: 100%;
-            }
         }
     }
 
     a,
     button {
         padding-inline: 1em;
+        display: flex;
+        align-items: center;
+        height: 100%;
 
         &:hover {
             background-color: #ffffff20;
@@ -193,6 +182,10 @@ nav {
         font-size: 1rem;
         color: white;
     }
+
+    .search {
+        height: auto;
+     }
 
     .subnav {
         width: 100vw;
@@ -224,10 +217,6 @@ nav {
         display: none;
     }
 
-    .search {
-        min-height: 100%;
-    }
-
     @media screen and (max-width: 768px) {
         .search {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.50);
@@ -252,11 +241,26 @@ nav {
     color: var(--primary-color);
 
     ul {
-        list-style-type: "| ";
-        padding-inline: 1em;
+        display: none;
 
-        li:nth-child(1) {
-            list-style: none;
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: .25em;
+        }
+
+        li::after {
+            margin-left: .5em;
+            content: "|";
+            opacity: 50%;
+            color: grey;
+        }
+
+        li:last-child:after {
+            content: "";
         }
     }
 
@@ -285,7 +289,7 @@ nav {
 
     border-radius: 2px;
     text-decoration: none;
-    padding: .75em 1em;
+    padding: .5em 1em;
 
     &:hover {
         text-decoration: none;
@@ -354,6 +358,18 @@ footer {
 
         li {
             display: inline-block;
+            margin-right: .25em;
+        }
+
+        li::after {
+            margin-left: .5em;
+            content: "|";
+            opacity: 50%;
+            color: grey;
+        }
+
+        li:last-child:after {
+            content: "";
         }
     }
 
@@ -452,7 +468,7 @@ footer {
 .button-link {
     display: block;
     text-decoration: none;
-    padding: .75em 1em;
+    padding: .5em 1em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
