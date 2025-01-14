@@ -1,31 +1,38 @@
-let buttonProducten = document.querySelector('.button-producten');
-let subnavProducten = document.querySelector('.subnav-producten');
+let buttons = document.querySelectorAll('.button-nav-primary');
+let subnavs = document.querySelectorAll('.button-nav-primary ~ nav');
 
-let buttonSituatie = document.querySelector('.button-situatie');
-let subnavSituatie = document.querySelector('.subnav-situatie');
-
-let buttonApp = document.querySelector('.button-app');
-let subnavApp = document.querySelector('.subnav-app');
-
-buttonProducten.addEventListener('click', () => {
-    subnavProducten.classList.toggle('collapsed');
-
-    if (!subnavApp.classList.contains('collapsed')) { subnavApp.classList.add('collapsed'); }
-    if (!subnavSituatie.classList.contains('collapsed')) { subnavSituatie.classList.add('collapsed'); }
+buttons.forEach(button => {
+    button.addEventListener("click", toggleExpand);
 });
 
-buttonSituatie.addEventListener('click', () => {
-    subnavSituatie.classList.toggle('collapsed');
+subnavs.forEach(subnav => {
+    subnav.addEventListener("blur", closeCurrentlyExpanded);
+})
 
-    if (!subnavApp.classList.contains('collapsed')) { subnavApp.classList.add('collapsed'); }
-    if (!subnavProducten.classList.contains('collapsed')) { subnavProducten.classList.add('collapsed'); }
+function toggleExpand(event) {
+    let button = event.currentTarget;
+    let subnav = button.nextElementSibling;
+
+    if (subnav.classList.contains('collapsed')) {
+        closeCurrentlyExpanded();
+        subnav.classList.remove('collapsed');
+        subnav.focus();
+        console.log(document.activeElement);
+    } else {
+        closeCurrentlyExpanded();
+    }
+};
+
+function closeCurrentlyExpanded() {     
+    subnavs.forEach(subnav => {
+        if (!subnav.classList.contains('collapsed')) {
+            subnav.classList.add('collapsed');
+        }
+    })
+};
+
+addEventListener("keydown", (e) => {
+    if (e.key == 'Escape') {
+        closeCurrentlyExpanded();
+    }
 });
-
-buttonApp.addEventListener('click', () => {
-    subnavApp.classList.toggle('collapsed');
-
-    if (!subnavProducten.classList.contains('collapsed')) { subnavProducten.classList.add('collapsed'); }
-    if (!subnavSituatie.classList.contains('collapsed')) { subnavSituatie.classList.add('collapsed'); }
-});
-
-// check which button has been clicked.
