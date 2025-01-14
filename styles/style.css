@@ -29,9 +29,14 @@
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     max-width: 100vw;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 a {
@@ -146,7 +151,8 @@ nav {
         li {
             min-width: max-content;
             
-            a, button {
+            a,
+            button {
                 display: flex;
                 align-items: center;
                 height: 100%;
@@ -154,16 +160,14 @@ nav {
         }
     }
 
-    a {
-        display: inline-block;
-        text-align: center;
+    a,
+    button {
         padding-inline: 1em;
 
         &:hover {
-            color: white;
-            text-decoration: none;
             background-color: #ffffff20;
             cursor: pointer;
+            text-decoration: none;
         }
     }
 
@@ -177,15 +181,6 @@ nav {
         font-family: var(--primary-font);
         font-size: 1rem;
         color: white;
-
-        /* Positioning */
-        padding-inline: 1em;
-
-        /* On hover */
-        &:hover {
-            background-color: #ffffff20;
-            cursor: pointer;
-        }
     }
 
     .subnav {
@@ -193,17 +188,25 @@ nav {
         position: absolute;
         left: 0;
         z-index: 1;
-        background-color: var(--primary-color);
+        background: #00675e linear-gradient(135deg,#005e5d 0,#00877d 58%,#00756f 58%,#009185 100%);
         color: white;
         min-height: 50vh;
 
         ul {
             display: block;
+            padding: 2em;
         }
-    }
 
-    input:checked ~ .subnav {
-        display: block;
+        button {
+            font-family: var(--secondary-font);
+            line-height: 2.5;
+            font-size: 1.125rem;
+            padding-inline: 0;
+        }
+
+        &:focus {
+            background-color: red;
+        }
     }
 
     .collapsed {
@@ -224,8 +227,7 @@ nav {
     .container {
         align-items: stretch;
 
-        & > ul {
-            position: relative;
+        &>ul {
             height: 3rem;
             overflow-x: scroll;
             scrollbar-width: none;
@@ -265,6 +267,11 @@ nav {
 .sign-in {
     background-color: var(--accent-color);
     color: black;
+
+    display: flex;
+    align-items: center;
+    gap: .25em;
+
     border-radius: 2px;
     text-decoration: none;
     padding: .75em 1em;
@@ -301,7 +308,8 @@ main {
         gap: 1rem;
         max-width: var(--content-width);
         background-color: var(--secondary-bg);
-        padding: 4rem 0;
+        padding: 4em 1em;
+        box-shadow: 0 2px 2px 0 rgba(34, 34, 34, .08);
     }
 
     li {
