@@ -168,6 +168,7 @@ p {
             background-color: #ffffff20;
             cursor: pointer;
             text-decoration: none;
+            transition: .2s;
         }
     }
 
@@ -186,6 +187,7 @@ p {
 
     .button-nav-primary {
         padding-right: 2em;
+        background-color: var(--primary-color);
     }
 
     .button-nav-primary::after {
@@ -202,10 +204,16 @@ p {
         transition: .3s;
     }
 
-    li:has(nav.collapsed) > .button-nav-primary::after {
-        transform: rotate(0deg);
-        transform-origin: center;
-        transition: .3s;
+    li:has(nav.collapsed) {
+        .button-nav-primary {
+            background-color: unset;
+        }
+
+        .button-nav-primary::after {
+            transform: rotate(0deg);
+            transform-origin: center;
+            transition: .3s;
+        }
     }
 
     .search {
@@ -228,9 +236,9 @@ p {
 
         button {
             font-family: var(--secondary-font);
-            line-height: 2.5;
             font-size: 1.125rem;
-            padding-inline: 0;
+            padding: .5em;
+            width: 12em;
         }
 
         &:focus {
