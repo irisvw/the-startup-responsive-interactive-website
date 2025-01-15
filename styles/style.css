@@ -425,9 +425,18 @@ footer {
     a::before {
         content: "";
         background-image: url("../assets/arrow-right.svg");
-        padding-right: 20px;
+        padding-right: 1.5em;
         background-repeat: no-repeat;
+        position: relative;
+        left: 0;
+        transition: .2s all;
     }
+
+    a:hover:before {
+        left: .33em;
+        transition: .1s all;
+    }
+    
 }
 
 .footer-help {
