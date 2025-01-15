@@ -181,11 +181,36 @@ p {
         font-family: var(--primary-font);
         font-size: 1rem;
         color: white;
+        position: relative;
+    }
+
+    .button-nav-primary {
+        padding-right: 2em;
+    }
+
+    .button-nav-primary::after {
+        display: block;
+        position: absolute;
+        background-image: url(../assets/arrow-down.svg);
+        background-repeat: no-repeat;
+        content: "";
+        top: 25%;
+        right: 0.25em;
+        aspect-ratio: 1;
+        height: 50%;
+        transform: rotate(-180deg);
+        transition: .2s;
+    }
+
+    li:has(nav.collapsed) > .button-nav-primary::after {
+        transform: rotate(0deg);
+        transform-origin: center;
+        transition: .2s;
     }
 
     .search {
         height: auto;
-     }
+    }
 
     .subnav {
         width: 100vw;
@@ -307,6 +332,7 @@ main {
 
     h1 {
         margin-bottom: .5em;
+        margin-top: 1em;
     }
 
     @media screen and (min-width: 768px) {
@@ -334,7 +360,7 @@ main {
         gap: 1rem;
         max-width: var(--content-width);
         background-color: var(--secondary-bg);
-        padding: 4em 1em;
+        padding: 0 1em 4em 1em;
         box-shadow: 0 2px 2px 0 rgba(34, 34, 34, .08);
     }
 
@@ -436,7 +462,7 @@ footer {
         left: .33em;
         transition: .1s all;
     }
-    
+
 }
 
 .footer-help {
