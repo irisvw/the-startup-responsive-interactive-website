@@ -199,13 +199,13 @@ p {
         aspect-ratio: 1;
         height: 50%;
         transform: rotate(-180deg);
-        transition: .2s;
+        transition: .3s;
     }
 
     li:has(nav.collapsed) > .button-nav-primary::after {
         transform: rotate(0deg);
         transform-origin: center;
-        transition: .2s;
+        transition: .3s;
     }
 
     .search {
