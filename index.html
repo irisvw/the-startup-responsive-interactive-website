@@ -38,10 +38,10 @@
                         <a href="#">Home</a>
                     </li>
                     <li>
-                        <button class="button-producten button-nav-primary" aria-expanded="false">
+                        <button class="button-producten button-nav-primary" aria-expanded="false" aria-controls="producten">
                             Producten
                         </button>
-                        <nav class="subnav collapsed">
+                        <nav class="subnav collapsed" id="producten">
                             <ul class="container">
                                 <li><button>Betalen & Creditcards</button></li>
                                 <li><button>Hypotheken</button></li>
@@ -54,10 +54,10 @@
                         </nav>
                     </li>
                     <li>
-                        <button class="button-situatie button-nav-primary" aria-expanded="false">
+                        <button class="button-situatie button-nav-primary" aria-expanded="false" aria-controls="situatie">
                             Je situatie
                         </button>
-                        <nav class="subnav collapsed">
+                        <nav class="subnav collapsed" id="situatie">
                             <ul class="container">
                                 <li><button>Familie & relaties</button></li>
                                 <li><button>Wonen</button></li>
@@ -70,10 +70,10 @@
                         </nav>
                     </li>
                     <li>
-                        <button class="button-app button-nav-primary" aria-expanded="false">
+                        <button class="button-app button-nav-primary" aria-expanded="false" aria-controls="bankieren">
                             App en Internet Bankieren
                         </button>
-                        <nav class="subnav collapsed">
+                        <nav class="subnav collapsed" id="bankieren">
                             <ul class="container">
                                 <li><button>ABN AMRO app</button></li>
                                 <li><button>Internet Bankieren</button></li>
@@ -88,6 +88,7 @@
                     </li>
                 </ul>
                 <button class="search" aria-label="search"><img src="assets/search.svg" alt=""></button>
+                <input type="search" placeholder="zoeken">
             </div>
         </nav>
     </header>

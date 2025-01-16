@@ -9,6 +9,12 @@ subnavs.forEach(subnav => {
     subnav.addEventListener("blur", closeCurrentlyExpanded);
 })
 
+document.addEventListener("keydown", (e) => {
+    if (e.key == 'Escape') {
+        closeCurrentlyExpanded();
+    }
+});
+
 function toggleExpand(event) {
     let button = event.currentTarget;
     let subnav = button.nextElementSibling;
@@ -16,23 +22,22 @@ function toggleExpand(event) {
     if (subnav.classList.contains('collapsed')) {
         closeCurrentlyExpanded();
         subnav.classList.remove('collapsed');
-        subnav.focus();
-        console.log(document.activeElement);
+        button.ariaExpanded = true;
     } else {
         closeCurrentlyExpanded();
     }
 };
 
-function closeCurrentlyExpanded() {     
+function closeCurrentlyExpanded() {
     subnavs.forEach(subnav => {
         if (!subnav.classList.contains('collapsed')) {
             subnav.classList.add('collapsed');
         }
     })
-};
 
-addEventListener("keydown", (e) => {
-    if (e.key == 'Escape') {
-        closeCurrentlyExpanded();
-    }
-});
+    buttons.forEach(button => {
+        if (button.ariaExpanded == 'true') {
+            button.ariaExpanded = false;
+        }
+    })
+};
