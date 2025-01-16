@@ -107,6 +107,7 @@ p {
     font-weight: 400;
     color: var(--primary-color);
     padding-bottom: .5em;
+    text-wrap: balance;
 }
 
 .header-l {
@@ -114,6 +115,7 @@ p {
     font-size: 2rem;
     line-height: 2.5rem;
     font-weight: 400;
+    text-wrap: balance;
 }
 
 .header-m {
@@ -121,6 +123,7 @@ p {
     line-height: 2rem;
     font-weight: 400;
     padding: .5em 0;
+    text-wrap: balance;
 }
 
 .header-s {
