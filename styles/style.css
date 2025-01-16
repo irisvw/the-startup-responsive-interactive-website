@@ -166,6 +166,7 @@ p {
         display: flex;
         align-items: center;
         height: 100%;
+        transition: .2s;
 
         &:hover {
             background-color: #ffffff20;
@@ -223,6 +224,17 @@ p {
         height: auto;
     }
 
+    input[type="search"] {
+        appearance: none;
+        border: 0;
+        border-radius: 2px;
+        width: 20em;
+        margin: .3em;
+        max-height: 2.75em;
+        font-size: 1rem;
+        padding-inline: 1em;
+    }
+
     .subnav {
         width: 100vw;
         position: absolute;
@@ -242,10 +254,6 @@ p {
             font-size: 1.125rem;
             padding: .5em;
             width: 12em;
-        }
-
-        &:focus {
-            background-color: red;
         }
     }
 
