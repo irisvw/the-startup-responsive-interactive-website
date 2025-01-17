@@ -4,5 +4,10 @@ searchBar = document.querySelector("input[type='search']");
 searchButton.addEventListener('click', toggleSearchbar);
 
 function toggleSearchbar() {
-    searchBar.classList.toggle('collapsed');
+    if (searchBar.classList.contains('collapsed')) {
+        searchBar.classList.remove('collapsed');
+        searchBar.focus();
+    } else {
+        searchBar.classList.add('collapsed');
+    }
 }
