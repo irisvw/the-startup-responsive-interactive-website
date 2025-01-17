@@ -66,6 +66,7 @@ a {
     }
 }
 
+/* Positioning helper classes */
 .flex {
     display: flex;
     flex-direction: column;
@@ -189,6 +190,8 @@ p {
         position: relative;
     }
 
+    /* The buttons that control the collapsible subnavs. */
+    /* Subnavs: expanded */
     .button-nav-primary {
         padding-right: 2em;
         background-color: var(--primary-color);
@@ -208,6 +211,7 @@ p {
         transition: .3s;
     }
 
+    /* Subnavs: collapsed */
     li:has(nav.collapsed) {
         .button-nav-primary {
             background-color: unset;
@@ -220,6 +224,7 @@ p {
         }
     }
 
+    /* Searchbar: expanded */
     form {
         position: relative;
 
@@ -228,19 +233,28 @@ p {
         }
     }
 
+    /* Searchbar: collapsed */
     form:has(input.collapsed) {
         .search {
             background-image: url(../assets/search.svg);
         }
     }
 
+    /* Search button */
     .search {
         width: 3em;
         height: 3em;
         position: absolute;
         right: 0;
+        background-color: var(--secondary-color);
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    @media screen and (min-width: 768px) {
+        .search {
+            background-color: unset;
+        }
     }
 
     input[type="search"] {
@@ -263,6 +277,7 @@ p {
             transition: .5s ease-in-out allow-discrete;
         }
 
+        /* Needed to animate from display: none to display: block */
         @starting-style {
             width: 0px;
             padding-inline: 0em;
@@ -321,6 +336,7 @@ p {
     }
 }
 
+/* The nav that contains the logo and the sign-in button */
 .nav-secondary {
     padding: 0em 1em;
     background-color: white;
@@ -360,6 +376,17 @@ p {
     }
 }
 
+.inline-link-list {
+    padding: 1em;
+    line-height: 1.5;
+
+    li>a {
+        padding: 1em 0;
+    }
+}
+
+/* The third navbar that is only visible on mobile. 
+Contains language selector, and a dropdown to pick between business and private banking. */
 .nav-mobile {
     background-color: white;
     color: var(--primary-color);
@@ -380,15 +407,6 @@ p {
     &:hover {
         text-decoration: none;
         background-color: #E8BF2B;
-    }
-}
-
-.inline-link-list {
-    padding: 1em;
-    line-height: 1.5;
-
-    li>a {
-        padding: 1em 0;
     }
 }
 
@@ -532,7 +550,6 @@ footer {
         left: .33em;
         transition: .1s all;
     }
-
 }
 
 .footer-help {
@@ -578,7 +595,8 @@ footer {
 
 @media screen and (min-width: 768px) {
     .copyright {
-        max-width: 30ch;
+        text-wrap: balance;
+        max-width: 25ch;
     }
 }
 
