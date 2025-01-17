@@ -220,19 +220,53 @@ p {
         }
     }
 
+    form {
+        position: relative;
+        .search {
+            background-image: url(../assets/icon-x.svg);
+            background-repeat: no-repeat;
+        }
+    }
+
+    form:has(input.collapsed) {
+        .search {
+            background-image: url(../assets/search.svg);
+            background-repeat: no-repeat;
+        }
+        
+    }
+
     .search {
-        height: auto;
+        width: 3em;
+        height: 3em;
+        position: absolute;
+        right: 0;
     }
 
     input[type="search"] {
+        display: block;
         appearance: none;
         border: 0;
         border-radius: 2px;
         width: 20em;
         margin: .3em;
-        max-height: 2.75em;
+        height: 100%;
+        max-height: 2.25em;
         font-size: 1rem;
         padding-inline: 1em;
+        transition: .5s ease-in allow-discrete;
+
+        &.collapsed {
+            display: none;
+            width: 0px;
+            padding-inline: 0em;
+            transition: .5s ease-in allow-discrete;
+        }
+
+        @starting-style {
+            width: 0px;
+            padding-inline: 0em;
+        }
     }
 
     .subnav {
