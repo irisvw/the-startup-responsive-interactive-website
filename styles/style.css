@@ -222,6 +222,7 @@ p {
 
     form {
         position: relative;
+
         .search {
             background-image: url(../assets/icon-x.svg);
         }
@@ -313,7 +314,7 @@ p {
 }
 
 .nav-secondary {
-    padding: .5em 1em;
+    padding: 0em 1em;
     background-color: white;
     color: var(--primary-color);
 
@@ -371,6 +372,15 @@ p {
     &:hover {
         text-decoration: none;
         background-color: #E8BF2B;
+    }
+}
+
+.inline-link-list {
+    padding: 1em;
+    line-height: 1.5;
+
+    li>a {
+        padding: 1em 0;
     }
 }
 
@@ -556,6 +566,12 @@ footer {
     display: block;
     text-decoration: none;
     padding: .5em 1em;
+}
+
+@media screen and (min-width: 768px) {
+    .copyright {
+        max-width: 30ch;
+    }
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
