@@ -10,4 +10,4 @@ function toggleSearchbar() {
     } else {
         searchBar.classList.add('collapsed');
     }
-}
+}s
