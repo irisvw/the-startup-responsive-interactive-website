@@ -224,16 +224,13 @@ p {
         position: relative;
         .search {
             background-image: url(../assets/icon-x.svg);
-            background-repeat: no-repeat;
         }
     }
 
     form:has(input.collapsed) {
         .search {
             background-image: url(../assets/search.svg);
-            background-repeat: no-repeat;
         }
-        
     }
 
     .search {
@@ -241,6 +238,8 @@ p {
         height: 3em;
         position: absolute;
         right: 0;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     input[type="search"] {
@@ -254,13 +253,13 @@ p {
         max-height: 2.25em;
         font-size: 1rem;
         padding-inline: 1em;
-        transition: .5s ease-in allow-discrete;
+        transition: .5s ease-in-out allow-discrete;
 
         &.collapsed {
             display: none;
             width: 0px;
             padding-inline: 0em;
-            transition: .5s ease-in allow-discrete;
+            transition: .5s ease-in-out allow-discrete;
         }
 
         @starting-style {
