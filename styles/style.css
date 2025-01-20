@@ -113,7 +113,7 @@ p {
 
 .header-l {
     font-family: var(--secondary-font);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 6vw, 2rem);
     line-height: 2.5rem;
     font-weight: 400;
     text-wrap: balance;
@@ -121,6 +121,7 @@ p {
 
 .header-m {
     font-family: var(--secondary-font);
+    font-size: clamp(1.3rem, 5vw, 1.5rem);
     line-height: 2rem;
     font-weight: 400;
     padding: .5em 0;
@@ -163,10 +164,10 @@ p {
 
     a,
     button {
-        padding-inline: 1em;
         display: flex;
         align-items: center;
         height: 100%;
+        padding-inline: 1em;
         transition: .2s;
 
         &:hover {
@@ -178,6 +179,8 @@ p {
     }
 
     button {
+        position: relative;
+
         /* Remove default styling */
         appearance: none;
         background-color: unset;
@@ -187,7 +190,6 @@ p {
         font-family: var(--primary-font);
         font-size: 1rem;
         color: white;
-        position: relative;
     }
 
     /* The buttons that control the collapsible subnavs. */
@@ -200,13 +202,14 @@ p {
     .button-nav-primary::after {
         display: block;
         position: absolute;
-        background-image: url(../assets/arrow-down.svg);
-        background-repeat: no-repeat;
-        content: "";
         top: 25%;
         right: 0.25em;
         aspect-ratio: 1;
         height: 50%;
+
+        background-image: url(../assets/arrow-down.svg);
+        background-repeat: no-repeat;
+        content: "";
         transform: rotate(-180deg);
         transition: .3s;
     }
@@ -246,6 +249,7 @@ p {
         height: 3em;
         position: absolute;
         right: 0;
+
         background-color: var(--secondary-color);
         background-position: center;
         background-repeat: no-repeat;
@@ -258,16 +262,20 @@ p {
     }
 
     input[type="search"] {
+        /* Positioning and sizing */
         display: block;
+        height: 100%;
+        max-height: 2.25em;
+        width: 20em;
+        margin: .3em;
+        padding-inline: 1em;
+
+        /* Styling */
         appearance: none;
         border: 0;
         border-radius: 2px;
-        width: 20em;
-        margin: .3em;
-        height: 100%;
-        max-height: 2.25em;
         font-size: 1rem;
-        padding-inline: 1em;
+
         transition: .5s ease-in-out allow-discrete;
 
         &.collapsed {
@@ -293,13 +301,16 @@ p {
     }
 
     .subnav {
+        /* Positioning and sizing */
         width: 100vw;
         position: absolute;
         left: 0;
         z-index: 1;
+        min-height: 50vh;
+
+        /* Styling */
         background: #00675e linear-gradient(135deg, #005e5d 0, #00877d 58%, #00756f 58%, #009185 100%);
         color: white;
-        min-height: 50vh;
 
         ul {
             display: block;
@@ -307,10 +318,10 @@ p {
         }
 
         button {
-            font-family: var(--secondary-font);
-            font-size: 1.125rem;
             padding: .5em;
             width: 12em;
+            font-family: var(--secondary-font);
+            font-size: 1.125rem;
         }
     }
 
@@ -393,17 +404,18 @@ Contains language selector, and a dropdown to pick between business and private 
 }
 
 .sign-in {
-    background-color: var(--accent-color);
-    color: black;
-
+    /* Positioning and sizing */
     display: flex;
     align-items: center;
     gap: .25em;
-
-    border-radius: 2px;
-    text-decoration: none;
     padding: .5em 1em;
 
+    /* Styling */
+    background-color: var(--accent-color);
+    color: black;
+    border-radius: 2px;
+    text-decoration: none;
+    
     &:hover {
         text-decoration: none;
         background-color: #E8BF2B;
@@ -435,6 +447,10 @@ main {
         max-width: 40em;
     }
 
+    li {
+        line-height: 1.5em;
+    }
+
     .breadcrumb {
         display: block;
         width: var(--content-width);
@@ -451,10 +467,6 @@ main {
         padding: 0 1em 4em 1em;
         box-shadow: 0 2px 2px 0 rgba(34, 34, 34, .08);
     }
-
-    li {
-        line-height: 1.5em;
-    }
 }
 
 /* ========== */
@@ -467,38 +479,14 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    .secondary-footer-nav {
-        
-
-        li {
-            display: inline-block;
-            margin-right: .25em;
-        }
-
-        li::after {
-            margin-left: .5em;
-            content: "|";
-            opacity: 50%;
-            color: grey;
-        }
-
-        li:last-child:after {
-            content: "";
-        }
-
-        @media screen and (min-width: 768px) {
-            max-width: 50%;
-        }
-    }
-
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     section {
         width: 100%;
         padding: 2rem;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .button-help {
@@ -523,6 +511,28 @@ footer {
 
     .details-subsection {
         min-width: max-content;
+    }
+
+    .secondary-footer-nav {
+        li {
+            display: inline-block;
+            margin-right: .25em;
+        }
+
+        li::after {
+            margin-left: .5em;
+            content: "|";
+            opacity: 50%;
+            color: grey;
+        }
+
+        li:last-child:after {
+            content: "";
+        }
+
+        @media screen and (min-width: 768px) {
+            max-width: 50%;
+        }
     }
 }
 
@@ -577,13 +587,13 @@ footer {
 }
 
 .social-button {
-    background-color: #9b9b9b;
+    display: flex;
     height: 2rem;
     width: 2rem;
-    display: inline-block;
-    display: flex;
     align-items: center;
     justify-content: center;
+
+    background-color: #9b9b9b;
     border-radius: 2px;
 
     &:hover {
@@ -593,14 +603,11 @@ footer {
 
 .button-link {
     display: block;
-    text-decoration: none;
     padding: .5em 1em;
+    text-decoration: none;
 }
 
-.socials {
-    padding: 1em;
-}
-
+.socials,
 .copyright {
     padding: 1em;
 }
