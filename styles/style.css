@@ -66,6 +66,15 @@ a {
     }
 }
 
+.alert {
+    color: white;
+    background-color: red;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
 /* Positioning helper classes */
 .flex {
     display: flex;
