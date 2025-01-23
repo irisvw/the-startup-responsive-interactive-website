@@ -12,6 +12,10 @@ LET OP: als je de website niet kunt zien omdat de browser denkt dat het een phis
 Ik heb een pagina gemaakt in de huisstijl van ABN AMRO. De pagina bevat een expandible navbar met dropdowns, met geanimeerde icoontjes die de staat van de dropdown representeren. Ook bevat de navbar een icoon voor een zoekbalk, die verandert in een volledige zoekbalk als je daar op klikt. De focus wordt dan automatisch op de zoekbalk gezet, zodat de gebruiker direct kan typen.
 
 De footer bevat een collapsible sectie met meer linkjes ('snel zelf regelen'). De list-style-type is customized met :before elements, die een stukje naar rechts springen wanneer je er overheen hovert.
+
+De pagina is mobile-first gebouwd en is responsive. Op smallere schermen is de navbar horizontaal scrollbaar. De headers zijn een kleinere lettergrootte, zodat ze mooi op het scherm passen. De onderdelen van de footer komen naast elkaar te staan op bredere schermen, en de grote headers worden groter.
+
+Ik heb de pagina accessible gemaakt voor keyboard gebruikers door een skip link toe te voegen. Ook kunnen de dropdowns worden geopend met de enter toets, en ook weer gesloten met enter of escape. 
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 #### Desktop:
@@ -58,8 +62,11 @@ https://github.com/irisvw/the-startup-responsive-interactive-website/blob/dca2bb
 - ##### @starting-style
 Ik heb @starting-style gebruikt om de zoekbalk geleidelijk te animeren van `display: none` naar `display: block`.
 
-
 https://github.com/irisvw/the-startup-responsive-interactive-website/blob/dca2bb9f2805ff72f27f63903ae0127048ecc4b6/styles/style.css#L289-L292
+- ##### text-wrap: balance
+Ik heb deze nieuwe CSS property gebruikt om de headers mooier weer te geven als het scherm te smal is om de tekstinhoud op één regel weer te geven.
+
+https://github.com/irisvw/the-startup-responsive-interactive-website/blob/fc82dd4b42eafd7f49e2aa25dc6b911d67ed058d/styles/style.css#L111
 
 #### JavaScript
 - ##### Focus function
@@ -70,10 +77,15 @@ https://github.com/irisvw/the-startup-responsive-interactive-website/blob/dca2bb
 Ik zet de aria-expanded van de navbar aan en uit met JavaScript.
 
 https://github.com/irisvw/the-startup-responsive-interactive-website/blob/dca2bb9f2805ff72f27f63903ae0127048ecc4b6/scripts/nav.js#L38-L42
-- ##### QuerySelectorAll
-Ik heb hier QuerySelectorAll gebruikt in combinatie met een sibling selector om alle subnavs te selecteren.
+- ##### querySelectorAll
+Ik heb hier querySelectorAll gebruikt in combinatie met een sibling selector om alle subnavs te selecteren.
 
 https://github.com/irisvw/the-startup-responsive-interactive-website/blob/dca2bb9f2805ff72f27f63903ae0127048ecc4b6/scripts/nav.js#L2
+
+Voor bonuspunten:
+
+![image](https://github.com/user-attachments/assets/52c55f53-9a61-44b8-8216-6c3b5f8faa01)
+
 
 ### Code conventies
 HTML
