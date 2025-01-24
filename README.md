@@ -19,12 +19,12 @@ Ik heb de pagina accessible gemaakt voor keyboard gebruikers door een skip link 
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 #### Desktop:
-<img src="https://github.com/user-attachments/assets/19ef5098-81f5-4dd1-aea2-36bbbff43c07" height="350">
-<img src="https://github.com/user-attachments/assets/3ed4a1d2-b5cc-409c-b72d-cc6f6e0fa6ea" height="350">
+<img src="https://github.com/user-attachments/assets/19ef5098-81f5-4dd1-aea2-36bbbff43c07" height="400">
+<img src="https://github.com/user-attachments/assets/3ed4a1d2-b5cc-409c-b72d-cc6f6e0fa6ea" height="400">
 
 #### Mobile:
-<img src="https://github.com/user-attachments/assets/666b0ed8-4196-491f-8058-d89c3621c71c" height="350">
-<img src="https://github.com/user-attachments/assets/3ed0bb02-8e58-42f7-9a6f-57302c5c31b7" height="350">
+<img src="https://github.com/user-attachments/assets/666b0ed8-4196-491f-8058-d89c3621c71c" height="400">
+<img src="https://github.com/user-attachments/assets/3ed0bb02-8e58-42f7-9a6f-57302c5c31b7" height="400">
 
 #### Expandible navbar:
 <img src="https://github.com/user-attachments/assets/e3098fcd-e8fb-40e4-9b90-47deedf3c326" height="350">
